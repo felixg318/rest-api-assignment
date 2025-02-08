@@ -1,4 +1,5 @@
 const express = require('express');
+const userRouter = require('./routes/user');
 const app = express();
 const port = 3000;
 
@@ -8,6 +9,7 @@ app.use(express.json());
 // **************************************************************
 // Put your implementation here
 // If necessary to add imports, please do so in the section above
+app.use('/', userRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
