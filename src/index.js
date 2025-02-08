@@ -1,8 +1,7 @@
 const express = require('express');
+const userRouter = require('./routes/user');
 const app = express();
 const port = 3000;
-
-const userRouter = require('./routes/user');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
